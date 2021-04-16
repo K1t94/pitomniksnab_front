@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    expose:
+      - 80
+    env_file:
+      - ./global.env
+    network_mode: bridge
